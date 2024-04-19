@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { useCart } from "./CartContext";
 
 function Banner() {
   let pages = ["Home", "About", "Gallery", "Store", "Blog"];
@@ -11,6 +12,8 @@ function Banner() {
   };
 
   let currentPage = useLocation().pathname;
+
+  const { cartCount } = useCart();
 
   return (
     <nav className="banner">
@@ -42,7 +45,7 @@ function Banner() {
             alt="cart"
             style={{ marginRight: "5px" }}
           />
-          0
+          {cartCount}
         </a>
       </div>
     </nav>

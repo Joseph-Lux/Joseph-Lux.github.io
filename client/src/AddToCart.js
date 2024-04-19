@@ -1,8 +1,4 @@
-module.exports = (id, quantity) => {
-  console.log("Add to cart method triggered.");
-  console.log(id);
-  console.log(quantity);
-  console.log(JSON.stringify({ id, quantity }));
+const AddToCart = (id, quantity) => {
   fetch("http://localhost:5000/cart/add", {
     method: "POST",
     credentials: "include",
@@ -22,3 +18,5 @@ module.exports = (id, quantity) => {
       console.error("Error:", error);
     });
 };
+
+export default AddToCart;
