@@ -34,6 +34,6 @@ app.use(
 );
 
 require("./Routes/apiRoutes")(app, Product);
-require("./Routes/cartRoutes")(app);
+require("./Routes/cartRoutes")(app, Product);
 
 app.listen(5000);

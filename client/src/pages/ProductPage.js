@@ -4,7 +4,7 @@ import PageHeader from "../components/PageHeader";
 import AddToCartButton from "../components/AddToCartButton";
 import Modal from "../components/Modal";
 
-const renderContent = (product, openModal) => {
+const renderContent = (product, quantity, setQuantity, openModal) => {
   return (
     <div className="product-page-container">
       <img
@@ -22,7 +22,15 @@ const renderContent = (product, openModal) => {
         </div>
         <div className="price">${product.price}</div>
         <div className="paragraph">{product.shortDesc}</div>
-        <AddToCartButton />
+        <input
+          className="quantity-input"
+          type="number"
+          value={quantity}
+          onChange={(e) => setQuantity(parseInt(e.target.value))}
+          min={1}
+          max={99}
+        />
+        <AddToCartButton id={product.id} quantity={quantity} />
       </div>
     </div>
   );
@@ -32,6 +40,7 @@ const Product = () => {
   const { productSlug } = useParams();
   const [product, setProduct] = useState(null);
   const [modalImage, setModalImage] = useState(null);
+  const [quantity, setQuantity] = useState(1);
 
   const openModal = (image) => {
     setModalImage(image);
@@ -58,7 +67,11 @@ const Product = () => {
         </a>
       </PageHeader>
 
-      {product !== null ? renderContent(product, openModal) : <p>Loading...</p>}
+      {product !== null ? (
+        renderContent(product, quantity, setQuantity, openModal)
+      ) : (
+        <p>Loading...</p>
+      )}
       {modalImage && <Modal image={modalImage} closeModal={closeModal} />}
     </div>
   );
