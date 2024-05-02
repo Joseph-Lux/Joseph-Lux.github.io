@@ -1,4 +1,5 @@
 const Modal = ({ image, closeModal }) => {
+  console.log(image);
   return (
     <div className="my-modal" onClick={closeModal}>
       <div className="my-modal-content">

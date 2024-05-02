@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import Banner from "./components/Banner";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Switch } from "react-router-dom";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Store from "./pages/Store";
@@ -10,6 +10,9 @@ import Blog from "./pages/Blog";
 import BlogPage from "./pages/BlogPage";
 import ProductPage from "./pages/ProductPage";
 import Cart from "./pages/Cart";
+import CheckoutForm from "./pages/Checkout";
+import Return from "./pages/Return";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
         <Route path="/blog/:postTitle" element={<BlogPage />} />
         <Route path="/product/:productSlug" element={<ProductPage />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<CheckoutForm />} />
+        <Route path="/return" element={<Return />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>
   );

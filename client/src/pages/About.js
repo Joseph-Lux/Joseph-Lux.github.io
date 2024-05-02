@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div className="page-column">
-      <img src="brushes.jpg" width="auto" height="auto" alt="brushes" />
+      <img src="/images/brushes.jpg" width="auto" height="auto" alt="brushes" />
       <div className="about-container">
         <div style={{ marginRight: "30px" }}>
           <div className="header">Meet the Artist</div>
@@ -21,14 +21,14 @@ const About = () => {
           </div>
         </div>
         <img
-          src="/bioPic.jpg"
+          src="/images/bioPic.jpg"
           alt="Bio Pic"
           style={{ width: "300px", height: "450px" }}
         />
       </div>
       <div className="about-container" style={{ justifyContent: "flex-start" }}>
         <img
-          src="/StudioPic.jpg"
+          src="/images/StudioPic.jpg"
           alt="Studio Pic"
           style={{ width: "300px", height: "450px", marginRight: "50px" }}
         />
@@ -63,7 +63,7 @@ const About = () => {
           <div className="paragraph">
             Part of Joseph's love for art stems from an understanding of the
             human person grounded in the thought of Pope St. John Paul II.
-            Joseph believes that beautiful art is grounded in a complete view of
+            Joseph believes that beautiful art incorporates a complete view of
             the human person, which recognizes our fundamental call to love. You
             can read more about Joseph's thoughts on the intersection of
             Anthropology and art on his blog.
@@ -78,7 +78,7 @@ const About = () => {
           </a>
         </div>
         <img
-          src="/jpii2.jpg"
+          src="/images/jpii2.jpg"
           style={{ width: "300px", height: "300px", alignSelf: "center" }}
           alt="JPII"
         />

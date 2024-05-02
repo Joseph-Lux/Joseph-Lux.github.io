@@ -1,9 +1,9 @@
 const express = require("express");
 const session = require("express-session");
+const keys = require("./config/keys");
+const stripe = require("stripe")(keys.stripeSecret);
 const cors = require("cors");
 const mongoose = require("mongoose");
-
-const keys = require("./config/keys");
 
 require("./models/Product");
 
@@ -34,6 +34,6 @@ app.use(
 );
 
 require("./Routes/apiRoutes")(app, Product);
-require("./Routes/cartRoutes")(app, Product);
+require("./Routes/cartRoutes")(app, Product, stripe);
 
 app.listen(5000);
