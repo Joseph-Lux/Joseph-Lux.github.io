@@ -1,19 +1,21 @@
 module.exports = [
   {
-    title: "Theology of the Body",
-    thumbnail: "/thumbnails/Theology of the Body.png",
-    date: "03/05/2024",
-    description: "Description: asdklamsdflkadsmflaksdmflkadlkfmaslkdmfalkd",
+    title: "Test Blog Post 3",
+    thumbnail: "/blog_thumbnails/BlogPost3.jpg",
+    date: "05/02/2024",
+    description: "Description: This is the description of the third blog post.",
   },
   {
-    title: "Theology of the Body Pt 2",
-    thumbnail: "/thumbnails/Theology of the Body Pt 2.jpg",
-    date: "03/05/2024",
-    description: "fjonzsdjfonzsdjfoandojsfn",
+    title: "Test Blog Post 2",
+    thumbnail: "/blog_thumbnails/BlogPost2.jpg",
+    date: "04/11/2024",
+    description:
+      "Description: This is the description of the second blog post.",
   },
   {
-    title: "Theology of the Body Pt 3",
+    title: "Test Blog Post 1",
+    thumbnail: "/blog_thumbnails/BlogPost1.jpg",
     date: "03/05/2024",
-    description: "__________________________",
+    description: "Description: This is the description of the first blog post.",
   },
 ];

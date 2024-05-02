@@ -20,7 +20,7 @@ function Banner() {
       <a className="navbar-brand logo" href="/">
         <img
           className="rounded"
-          src="/anchorBW.png"
+          src="/images/anchorBW.png"
           width="50"
           height=""
           alt=""
@@ -39,7 +39,7 @@ function Banner() {
         ))}
         <a href="/cart" className="link">
           <img
-            src="/shopping-cart-icon.png"
+            src="/images/shopping-cart-icon.png"
             width="18px"
             height="18px"
             alt="cart"

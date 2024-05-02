@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import AddToCartButton from "../components/AddToCartButton";
 import Modal from "../components/Modal";
+import PageNotFound from "./PageNotFound";
 
 const renderContent = (product, quantity, setQuantity, openModal) => {
   return (
@@ -58,6 +59,10 @@ const Product = () => {
         console.error("Error loading product: ", error);
       });
   }, [productSlug]);
+
+  if (product !== null && product.error) {
+    return <PageNotFound />;
+  }
 
   return (
     <div className="page-column">

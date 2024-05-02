@@ -14,15 +14,16 @@ const getColumns = (images, numCols, openModal) => {
   return (
     <>
       {columns.map((column, index) => (
-        <div className="gallery-column">
+        <div className="gallery-column" key={index}>
           {column.map((image, imgIndex) => (
             <div
               className="gallery-image-wrap"
               onClick={() => openModal(image.source)}
+              key={imgIndex}
             >
               <img
                 className="gallery-image"
-                src={image.source}
+                src={image.lowRes}
                 alt={image.title}
               />
               <div className="gallery-image-description">
@@ -32,9 +33,9 @@ const getColumns = (images, numCols, openModal) => {
                 >
                   {image.title}
                 </h1>
-                <text className="paragraph">
+                <div className="paragraph">
                   <i>{image.description}</i>
-                </text>
+                </div>
               </div>
             </div>
           ))}

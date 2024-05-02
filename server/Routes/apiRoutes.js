@@ -29,7 +29,7 @@ module.exports = (app, Product) => {
     try {
       const product = await Product.findOne({ id: productSlug });
       if (!product) {
-        res.status(404).json({ error: "Product not found" });
+        return res.status(404).json({ error: "Product not found" });
       }
       res.send(product);
     } catch (error) {

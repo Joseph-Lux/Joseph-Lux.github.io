@@ -2,7 +2,13 @@ import AddToCart from "../AddToCart";
 import { useCart } from "./CartContext";
 import { useState, useEffect } from "react";
 
-const CartProduct = ({ product, quantity, onDelete }) => {
+const CartProduct = ({
+  product,
+  quantity,
+  onDelete,
+  incrementQuantity,
+  decrementQuantity,
+}) => {
   const { cartCount, setCartCount } = useCart();
   const [stateQuantity, setStateQuantity] = useState(quantity);
 
@@ -31,6 +37,7 @@ const CartProduct = ({ product, quantity, onDelete }) => {
                 AddToCart(product.id, -1);
                 setStateQuantity(stateQuantity - 1);
                 setCartCount(cartCount - 1);
+                decrementQuantity(product.id, -1);
               }}
             >
               -
@@ -45,12 +52,13 @@ const CartProduct = ({ product, quantity, onDelete }) => {
               AddToCart(product.id, 1);
               setStateQuantity(stateQuantity + 1);
               setCartCount(cartCount + 1);
+              incrementQuantity(product.id, 1);
             }}
           >
             +
           </button>
         </div>
-        <div style={{ width: "130px" }}>${product.price * quantity}</div>
+        <div style={{ width: "130px" }}>${product.price * stateQuantity}</div>
         <button
           className="remove-from-cart"
           onClick={() => {

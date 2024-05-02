@@ -22,7 +22,7 @@ const Home = () => {
         <a
           href="/About"
           className="highlight-image"
-          style={{ backgroundImage: "url('paletteSquare.png')" }}
+          style={{ backgroundImage: "url('images/paletteSquare.png')" }}
         >
           Meet Joseph
         </a>
@@ -30,7 +30,7 @@ const Home = () => {
           href="/Gallery"
           className="highlight-image"
           style={{
-            backgroundImage: "url('Gallery2.jpg')",
+            backgroundImage: "url('images/Gallery2.jpg')",
           }}
         >
           Browse Gallery
@@ -38,7 +38,7 @@ const Home = () => {
         <a
           href="/Store"
           className="highlight-image"
-          style={{ backgroundImage: "url('SacredHeartSquare.jpg')" }}
+          style={{ backgroundImage: "url('images/SacredHeartSquare.jpg')" }}
         >
           Shop the Store
         </a>

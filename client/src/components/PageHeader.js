@@ -10,7 +10,7 @@ const PageHeader = ({ children }) => {
       }}
     >
       <img
-        src="/swirl.png"
+        src="/images/swirl.png"
         style={{ height: "40px", width: "auto" }}
         alt="left swirl"
       />
@@ -26,7 +26,7 @@ const PageHeader = ({ children }) => {
         {children}
       </h1>
       <img
-        src="/swirl.png"
+        src="/images/swirl.png"
         style={{ height: "40px", width: "auto", transform: "scaleX(-1)" }}
         alt="right swirl"
       />
