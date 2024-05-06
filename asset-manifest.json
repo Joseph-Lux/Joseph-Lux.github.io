@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/LuxWebsite/static/css/main.63320655.css",
+    "main.js": "/LuxWebsite/static/js/main.fdbfa0ac.js",
+    "static/js/453.272f3800.chunk.js": "/LuxWebsite/static/js/453.272f3800.chunk.js",
+    "static/media/SacredHeartSquare.jpg": "/LuxWebsite/static/media/SacredHeartSquare.5b93b7b452c3c86df9ad.jpg",
+    "index.html": "/LuxWebsite/index.html",
+    "main.63320655.css.map": "/LuxWebsite/static/css/main.63320655.css.map",
+    "main.fdbfa0ac.js.map": "/LuxWebsite/static/js/main.fdbfa0ac.js.map",
+    "453.272f3800.chunk.js.map": "/LuxWebsite/static/js/453.272f3800.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63320655.css",
+    "static/js/main.fdbfa0ac.js"
+  ]
+}
