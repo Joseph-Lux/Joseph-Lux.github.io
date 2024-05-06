@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.e5ff814d.css",
-    "main.js": "/static/js/main.31aa648c.js",
+    "main.js": "/static/js/main.ed5529fa.js",
     "static/js/453.272f3800.chunk.js": "/static/js/453.272f3800.chunk.js",
     "static/media/SacredHeartSquare.jpg": "/static/media/SacredHeartSquare.5b93b7b452c3c86df9ad.jpg",
     "index.html": "/index.html",
     "main.e5ff814d.css.map": "/static/css/main.e5ff814d.css.map",
-    "main.31aa648c.js.map": "/static/js/main.31aa648c.js.map",
+    "main.ed5529fa.js.map": "/static/js/main.ed5529fa.js.map",
     "453.272f3800.chunk.js.map": "/static/js/453.272f3800.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e5ff814d.css",
-    "static/js/main.31aa648c.js"
+    "static/js/main.ed5529fa.js"
   ]
 }
