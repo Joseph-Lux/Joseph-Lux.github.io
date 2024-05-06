@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/LuxWebsite/static/css/main.63320655.css",
-    "main.js": "/LuxWebsite/static/js/main.fdbfa0ac.js",
-    "static/js/453.272f3800.chunk.js": "/LuxWebsite/static/js/453.272f3800.chunk.js",
-    "static/media/SacredHeartSquare.jpg": "/LuxWebsite/static/media/SacredHeartSquare.5b93b7b452c3c86df9ad.jpg",
-    "index.html": "/LuxWebsite/index.html",
-    "main.63320655.css.map": "/LuxWebsite/static/css/main.63320655.css.map",
-    "main.fdbfa0ac.js.map": "/LuxWebsite/static/js/main.fdbfa0ac.js.map",
-    "453.272f3800.chunk.js.map": "/LuxWebsite/static/js/453.272f3800.chunk.js.map"
+    "main.css": "/static/css/main.e5ff814d.css",
+    "main.js": "/static/js/main.31aa648c.js",
+    "static/js/453.272f3800.chunk.js": "/static/js/453.272f3800.chunk.js",
+    "static/media/SacredHeartSquare.jpg": "/static/media/SacredHeartSquare.5b93b7b452c3c86df9ad.jpg",
+    "index.html": "/index.html",
+    "main.e5ff814d.css.map": "/static/css/main.e5ff814d.css.map",
+    "main.31aa648c.js.map": "/static/js/main.31aa648c.js.map",
+    "453.272f3800.chunk.js.map": "/static/js/453.272f3800.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.63320655.css",
-    "static/js/main.fdbfa0ac.js"
+    "static/css/main.e5ff814d.css",
+    "static/js/main.31aa648c.js"
   ]
 }
