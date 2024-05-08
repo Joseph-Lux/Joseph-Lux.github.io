@@ -21,7 +21,7 @@ const CartProduct = ({
     <>
       <div className="cart-list paragraph">
         <Link to={"/product/" + product.id}>
-          <img src={product.thumbnail} />
+          <img src={product.thumbnail} alt="product thumbnail" />
         </Link>
         <div style={{ marginLeft: "20px", width: "345px", textAlign: "left" }}>
           <Link to={"/product/" + product.id} className="simple-link">

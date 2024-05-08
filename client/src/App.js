@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import Banner from "./components/Banner";
-import { Route, Routes, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Store from "./pages/Store";
