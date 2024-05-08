@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const About = () => {
   return (
     <div className="page-column">
@@ -68,14 +70,14 @@ const About = () => {
             can read more about Joseph's thoughts on the intersection of
             Anthropology and art on his blog.
           </div>
-          <a
+          <Link
             style={{ width: "7rem", alignSelf: "center", marginTop: "40px" }}
             type="button"
             className="btn btn-outline-secondary"
-            href="/Blog"
+            to="/blog"
           >
             Read More
-          </a>
+          </Link>
         </div>
         <img
           src="/images/jpii2.jpg"

@@ -1,4 +1,5 @@
 import AddToCartButton from "./AddToCartButton";
+import { Link } from "react-router-dom";
 
 const ProductListing = ({ product }) => {
   return (
@@ -9,13 +10,13 @@ const ProductListing = ({ product }) => {
         alt="product thumbnail"
       />
       <div className="product-list__text">
-        <a
+        <Link
           className="header simple-link"
-          href={"/product/" + product.id}
+          to={"/product/" + product.id}
           style={{ marginBottom: "0" }}
         >
           {product.title}
-        </a>
+        </Link>
         <div className="price">${product.price}</div>
         <div className="paragraph">{product.shortDesc}</div>
         <AddToCartButton id={product.id} quantity={1} />

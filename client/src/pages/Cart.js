@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PageHeader from "../components/PageHeader";
 import CartProduct from "../components/CartProduct";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const [cart, setCart] = useState({});
@@ -103,9 +104,9 @@ const Cart = () => {
             </i>
           </div>
           <div className="checkout-button-wrapper">
-            <a href="/checkout" style={{ marginLeft: "725px" }}>
+            <Link to="/checkout" style={{ marginLeft: "725px" }}>
               <button className="my-button">Checkout</button>
-            </a>
+            </Link>
           </div>
         </div>
       ) : (
@@ -120,9 +121,9 @@ const Cart = () => {
           Your cart is currently empty.
         </div>
       )}
-      <a href="/store" style={{ alignSelf: "center" }}>
+      <Link to="/store" style={{ alignSelf: "center" }}>
         <button className="my-button">Continue shopping</button>
-      </a>
+      </Link>
     </div>
   );
 };

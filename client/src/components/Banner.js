@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useCart } from "./CartContext";
+import { Link } from "react-router-dom";
 
 function Banner() {
   let pages = ["Home", "About", "Gallery", "Store", "Blog"];
@@ -17,7 +18,7 @@ function Banner() {
 
   return (
     <nav className="banner">
-      <a className="navbar-brand logo" href="/">
+      <Link className="navbar-brand logo" to="/">
         <img
           className="rounded"
           src="/images/anchorBW.png"
@@ -26,18 +27,18 @@ function Banner() {
           alt=""
         />
         <div className="logo-text">Joseph Andrew Lux</div>
-      </a>
+      </Link>
       <div className="nav-links">
         {pages.map((title) => (
-          <a
+          <Link
             className={links[title] === currentPage ? "active-link" : "link"}
-            href={links[title]}
+            to={links[title]}
             key={links[title]}
           >
             {title}
-          </a>
+          </Link>
         ))}
-        <a href="/cart" className="link">
+        <Link to="/cart" className="link">
           <img
             src="/images/shopping-cart-icon.png"
             width="18px"
@@ -46,7 +47,7 @@ function Banner() {
             style={{ marginRight: "5px" }}
           />
           {cartCount}
-        </a>
+        </Link>
       </div>
     </nav>
   );

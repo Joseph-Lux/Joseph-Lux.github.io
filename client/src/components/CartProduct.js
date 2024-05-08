@@ -1,6 +1,7 @@
 import AddToCart from "../AddToCart";
 import { useCart } from "./CartContext";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const CartProduct = ({
   product,
@@ -19,13 +20,13 @@ const CartProduct = ({
   return (
     <>
       <div className="cart-list paragraph">
-        <a href={"/product/" + product.id}>
+        <Link to={"/product/" + product.id}>
           <img src={product.thumbnail} />
-        </a>
+        </Link>
         <div style={{ marginLeft: "20px", width: "345px", textAlign: "left" }}>
-          <a href={"/product/" + product.id} className="simple-link">
+          <Link to={"/product/" + product.id} className="simple-link">
             {product.title}
-          </a>
+          </Link>
         </div>
         <div style={{ width: "130px" }}>${product.price}</div>
         <div style={{ width: "130px" }}>

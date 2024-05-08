@@ -13,13 +13,15 @@ import Cart from "./pages/Cart";
 import CheckoutForm from "./pages/Checkout";
 import Return from "./pages/Return";
 import PageNotFound from "./pages/PageNotFound";
+import ScrollToTopOnMount from "./components/ScrollToTopOnMount";
 
 function App() {
   return (
     <>
       <Banner />
+      <ScrollToTopOnMount />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/store" element={<Store />} />
