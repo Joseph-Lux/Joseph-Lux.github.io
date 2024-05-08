@@ -1,13 +1,13 @@
 const express = require("express");
 const session = require("express-session");
 const keys = require("./config/keys");
-const stripe = require("stripe")(keys.stripeSecret);
+const stripe = require("stripe")(process.env.STRIPE_SECRET);
 const cors = require("cors");
 const mongoose = require("mongoose");
 
 require("./models/Product");
 
-mongoose.connect(keys.mongoURI);
+mongoose.connect(process.env.MONGO_URI);
 
 const Product = mongoose.model("products");
 
@@ -21,7 +21,7 @@ app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 
 app.use(
   session({
-    secret: keys.sessionSecret,
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -36,4 +36,4 @@ app.use(
 require("./Routes/apiRoutes")(app, Product);
 require("./Routes/cartRoutes")(app, Product, stripe);
 
-app.listen(5000);
+app.listen(process.env.PORT || 5000);

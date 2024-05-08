@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Joseph-Lux.github.io/LuxWebsite",
+  "homepage": "https://Joseph-Lux.github.io",
   "name": "lux-website",
   "version": "0.1.0",
   "private": true,
@@ -10,7 +10,9 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.2",
+    "install": "^0.13.0",
     "mongoose": "^8.2.4",
+    "netlify-cli": "^17.23.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.1",

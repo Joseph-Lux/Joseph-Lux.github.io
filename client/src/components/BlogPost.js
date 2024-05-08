@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function BlogPost({ post }) {
   return (
     <div className="blog-post-container">
@@ -12,9 +14,9 @@ function BlogPost({ post }) {
         }}
       >
         <div style={{ marginBottom: "10px" }}>{post.date}</div>
-        <a href={"/Blog/" + post.title} className="header simple-link">
+        <Link to={"/Blog/" + post.title} className="header simple-link">
           {post.title}
-        </a>
+        </Link>
         <div className="paragraph" style={{ marginTop: "10px" }}>
           {post.description}
         </div>

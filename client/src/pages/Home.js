@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <div className="page-column">
@@ -10,38 +12,40 @@ const Home = () => {
         Christian tradition with the philosophical and theological anthropology
         of John Paul II.
       </text>
-      <a
+      <Link
         style={{ width: "7rem", alignSelf: "center" }}
         type="button"
         className="btn btn-outline-secondary"
-        href="/About"
+        to="/about"
       >
         Read More
-      </a>
+      </Link>
       <div className="link-row">
-        <a
-          href="/About"
+        <Link
+          to="/about"
           className="highlight-image"
           style={{ backgroundImage: "url('images/paletteSquare.png')" }}
         >
           Meet Joseph
-        </a>
-        <a
-          href="/Gallery"
+        </Link>
+        <Link
+          to="/gallery"
           className="highlight-image"
           style={{
             backgroundImage: "url('images/Gallery2.jpg')",
           }}
         >
           Browse Gallery
-        </a>
-        <a
-          href="/Store"
+        </Link>
+        <Link
+          to="/store"
           className="highlight-image"
-          style={{ backgroundImage: "url('images/SacredHeartSquare.jpg')" }}
+          style={{
+            backgroundImage: "url('product_thumbnails/SacredHeartSquare.jpg')",
+          }}
         >
           Shop the Store
-        </a>
+        </Link>
       </div>
     </div>
   );
