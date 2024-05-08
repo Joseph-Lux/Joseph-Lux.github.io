@@ -1,13 +1,13 @@
 const express = require("express");
 const session = require("express-session");
 const keys = require("./config/keys");
-const stripe = require("stripe")(process.env.STRIPE_SECRET);
+const stripe = require("stripe")(keys.stripeSecret);
 const cors = require("cors");
 const mongoose = require("mongoose");
 
 require("./models/Product");
 
-mongoose.connect(process.env.MONGO_URI);
+mongoose.connect(keys.mongoURI);
 
 const Product = mongoose.model("products");
 
@@ -17,11 +17,17 @@ app.set("trust proxy", 1);
 
 app.use(express.json());
 
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(
+  cors({
+    origin:
+      "https://663ba8fe1b3b480087f4d73a--super-licorice-5d41ea.netlify.app",
+    credentials: true,
+  })
+);
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret: keys.sessionSecret,
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -36,4 +42,4 @@ app.use(
 require("./Routes/apiRoutes")(app, Product);
 require("./Routes/cartRoutes")(app, Product, stripe);
 
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT || 80);
