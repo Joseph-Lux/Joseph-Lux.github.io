@@ -1,12 +1,12 @@
 import React, { useState, useContext, createContext, useEffect } from "react";
-
+import serverURL from "../GetServerURL";
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:5000/cart/count", { credentials: "include" })
+    fetch(`${serverURL}/cart/count`, { credentials: "include" })
       .then((response) => response.json())
       .then((data) => {
         setCartCount(data.cartCount);

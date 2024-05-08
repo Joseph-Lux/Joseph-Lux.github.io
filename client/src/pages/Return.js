@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import PageNotFound from "./PageNotFound";
+import serverURL from "../GetServerURL";
 
 const Return = () => {
   const [status, setStatus] = useState(null);
@@ -13,7 +14,7 @@ const Return = () => {
     const sessionId = urlParams.get("session_id");
 
     if (sessionId) {
-      fetch(`http://localhost:5000/session-status?session_id=${sessionId}`)
+      fetch(`${serverURL}/session-status?session_id=${sessionId}`)
         .then((res) => res.json())
         .then((data) => {
           setStatus(data.status);

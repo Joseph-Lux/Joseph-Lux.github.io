@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ProductListing from "../components/ProductListing";
 import PageHeader from "../components/PageHeader";
+import serverURL from "../GetServerURL";
 
 const Store = () => {
   const [products, setProducts] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/productlist")
+    fetch(`${serverURL}/api/productlist`)
       .then((response) => {
         return response.json();
       })

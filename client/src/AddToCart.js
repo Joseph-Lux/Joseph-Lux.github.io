@@ -1,5 +1,7 @@
+import serverURL from "./GetServerURL";
+
 const AddToCart = (id, quantity) => {
-  fetch("http://localhost:5000/cart/add", {
+  fetch(`${serverURL}/cart/add`, {
     method: "POST",
     credentials: "include",
     headers: {

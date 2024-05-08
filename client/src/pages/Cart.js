@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import PageHeader from "../components/PageHeader";
 import CartProduct from "../components/CartProduct";
 import { Link } from "react-router-dom";
+import serverURL from "../GetServerURL";
 
 const Cart = () => {
   const [cart, setCart] = useState({});
   const [subtotal, setSubtotal] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:5000/cart", { credentials: "include" })
+    fetch(`${serverURL}/cart`, { credentials: "include" })
       .then((response) => response.json())
       .then((data) => {
         setCart(data);
@@ -27,7 +28,7 @@ const Cart = () => {
   }, [cart]);
 
   const removeFromCart = (id) => {
-    fetch("http://localhost:5000/cart/remove", {
+    fetch(`${serverURL}/cart/remove`, {
       method: "POST",
       credentials: "include",
       headers: {

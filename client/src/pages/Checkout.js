@@ -6,6 +6,7 @@ import {
 } from "@stripe/react-stripe-js";
 import PageHeader from "../components/PageHeader";
 import { useCart } from "../components/CartContext";
+import serverURL from "../GetServerURL";
 
 const stripePromise = loadStripe("pk_test_lbKnP7kYWo7JHiMZvrbBZyFu");
 
@@ -13,7 +14,7 @@ const CheckoutForm = () => {
   console.log("StripePromise:", stripePromise);
   const fetchClientSecret = useCallback(() => {
     // Create a Checkout Session
-    return fetch("http://localhost:5000/create-checkout-session", {
+    return fetch(`${serverURL}/create-checkout-session`, {
       method: "POST",
       credentials: "include",
     })

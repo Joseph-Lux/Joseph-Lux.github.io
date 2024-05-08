@@ -4,6 +4,7 @@ import PageHeader from "../components/PageHeader";
 import AddToCartButton from "../components/AddToCartButton";
 import Modal from "../components/Modal";
 import PageNotFound from "./PageNotFound";
+import serverURL from "../GetServerURL";
 
 const renderContent = (product, quantity, setQuantity, openModal) => {
   return (
@@ -52,7 +53,7 @@ const Product = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/product/" + productSlug)
+    fetch(`${serverURL}/api/product/` + productSlug)
       .then((response) => response.json())
       .then((data) => setProduct(data))
       .catch((error) => {
