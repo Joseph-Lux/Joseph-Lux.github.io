@@ -122,7 +122,7 @@ const Cart = () => {
           Your cart is currently empty.
         </div>
       )}
-      <Link to="/store" style={{ alignSelf: "center" }}>
+      <Link to="/store" style={{ alignSelf: "center", marginBottom: "50px" }}>
         <button className="my-button">Continue shopping</button>
       </Link>
     </div>
