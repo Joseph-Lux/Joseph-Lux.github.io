@@ -21,8 +21,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin:
-      "https://663ba8fe1b3b480087f4d73a--super-licorice-5d41ea.netlify.app",
+    origin: "https://main--tangerine-concha-cbf656.netlify.app/",
     credentials: true,
   })
 );
