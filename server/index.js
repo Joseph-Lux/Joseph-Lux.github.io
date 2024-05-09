@@ -33,7 +33,7 @@ app.use(
     saveUninitialized: false,
     cookie: {
       maxAge: 36000000, // 10 hours
-      secure: false,
+      secure: true,
       httpOnly: false,
       sameSite: "lax",
     },
