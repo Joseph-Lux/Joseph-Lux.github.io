@@ -21,7 +21,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://main--tangerine-concha-cbf656.netlify.app",
+    origin: "https://luxwebsite.josephandrewlux.com",
     credentials: true,
   })
 );
