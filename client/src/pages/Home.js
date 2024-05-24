@@ -4,14 +4,14 @@ const Home = () => {
   return (
     <div className="page-column">
       <div className="sacred" />
-      <text
+      <div
         style={{ padding: "50px", textAlign: "center" }}
         className="paragraph"
       >
         Joseph Lux is a sacred artist exploring the integration of the Western
         Christian tradition with the philosophical and theological anthropology
         of John Paul II.
-      </text>
+      </div>
       <Link
         style={{ width: "7rem", alignSelf: "center" }}
         type="button"

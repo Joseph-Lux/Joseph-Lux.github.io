@@ -21,7 +21,7 @@ function Banner() {
       <Link className="navbar-brand logo" to="/">
         <img
           className="rounded"
-          src="/images/anchorBW.png"
+          src="/images/anchorBW-192x192.png"
           width="50"
           height=""
           alt=""
