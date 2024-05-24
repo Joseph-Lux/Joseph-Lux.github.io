@@ -41,7 +41,7 @@ const Home = () => {
           to="/store"
           className="highlight-image"
           style={{
-            backgroundImage: "url('product_thumbnails/SacredHeartSquare.jpg')",
+            backgroundImage: "url('product_thumbnails/SeaOfGalileeSquare.jpg')",
           }}
         >
           Shop the Store

@@ -10,4 +10,4 @@ And here's an image:
 
 And here's a link:
 
-[Click Me!](http://localhost:3000/)
+[Click Me!](http://luxwebsite.josephandrewlux.com/)
