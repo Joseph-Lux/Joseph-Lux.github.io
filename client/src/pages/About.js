@@ -5,8 +5,8 @@ const About = () => {
     <div className="page-column">
       <img src="/images/brushes.jpg" width="auto" height="auto" alt="brushes" />
       <div className="about-container">
-        <div style={{ marginRight: "30px" }}>
-          <div className="header">Meet the Artist</div>
+        <div className="about-the-artist">
+          <div className="header about-header">Meet the Artist</div>
           <div className="paragraph">
             Joseph is a Sacred Artist living in St. Louis, Missouri. He
             graduated from Saint Louis University with a degree in Philosophy.
@@ -32,10 +32,11 @@ const About = () => {
         <img
           src="/images/StudioPic.jpg"
           alt="Studio Pic"
-          style={{ width: "300px", height: "450px", marginRight: "50px" }}
+          className="studio-pic"
+          style={{ width: "300px", height: "450px" }}
         />
         <div>
-          <div className="header">Selected Works</div>
+          <div className="header about-header">Selected Works</div>
           <ul className="paragraph works-list">
             <li>
               <i>Sacred Heart</i> -- Oil on Canvas, 18"x24" (2024)
@@ -60,8 +61,8 @@ const About = () => {
         </div>
       </div>
       <div className="about-container">
-        <div style={{ marginRight: "50px" }}>
-          <div className="header">Theology of the Body</div>
+        <div className="tob-container">
+          <div className="header about-header">Theology of the Body</div>
           <div className="paragraph">
             Part of Joseph's love for art stems from an understanding of the
             human person grounded in the thought of Pope St. John Paul II.
@@ -71,9 +72,8 @@ const About = () => {
             Anthropology and art on his blog.
           </div>
           <Link
-            style={{ width: "7rem", alignSelf: "center", marginTop: "40px" }}
             type="button"
-            className="btn btn-outline-secondary"
+            className="btn btn-outline-secondary tob-read-more"
             to="/blog"
           >
             Read More
