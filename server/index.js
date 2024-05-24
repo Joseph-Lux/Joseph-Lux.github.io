@@ -19,12 +19,21 @@ app.set("trust proxy", 1);
 
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: "https://luxwebsite.josephandrewlux.com",
-    credentials: true,
-  })
-);
+if (process.env.NODE_ENV === "dev") {
+  app.use(
+    cors({
+      origin: "http://localhost:3000",
+      credentials: true,
+    })
+  );
+} else {
+  app.use(
+    cors({
+      origin: "https://luxwebsite.josephandrewlux.com",
+      credentials: true,
+    })
+  );
+}
 
 app.use(
   session({
@@ -43,15 +52,21 @@ app.use(
 require("./Routes/apiRoutes")(app, Product);
 require("./Routes/cartRoutes")(app, Product, stripe);
 
-const options = {
-  key: fs.readFileSync(
-    "/etc/letsencrypt/archive/api.josephandrewlux.com/privkey1.pem"
-  ),
-  cert: fs.readFileSync(
-    "/etc/letsencrypt/archive/api.josephandrewlux.com/fullchain1.pem"
-  ),
-};
+if (process.env.NODE_ENV === "dev") {
+  app.listen(5000, () => {
+    console.log("Express server running in development mode on port 5000");
+  });
+} else {
+  const options = {
+    key: fs.readFileSync(
+      "/etc/letsencrypt/archive/api.josephandrewlux.com/privkey1.pem"
+    ),
+    cert: fs.readFileSync(
+      "/etc/letsencrypt/archive/api.josephandrewlux.com/fullchain1.pem"
+    ),
+  };
 
-https.createServer(options, app).listen(443, () => {
-  console.log("Express server running over HTTPS on port 443");
-});
+  https.createServer(options, app).listen(443, () => {
+    console.log("Express server running over HTTPS on port 443");
+  });
+}

@@ -506,6 +506,19 @@
   }
 }
 
+@media(max-width:800px){
+  .product-list{
+    flex-direction: column;
+    width: 80vw;
+    height: auto;
+  }
+  .product-list__thumbnail {
+    width: calc(80vw - 30px);
+    height: calc(80vw - 30px);
+    margin: 30px 30px 0 30px;
+  }
+}
+
 .product-image {
   height: auto;
   width: 400px;
