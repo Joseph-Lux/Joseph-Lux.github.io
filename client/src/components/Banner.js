@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useCart } from "./CartContext";
 import { Link } from "react-router-dom";
 
@@ -7,7 +7,6 @@ function Banner() {
   const [menuOpen, setMenuOpen] = useState(false); // State to track if menu is open or closed
   const { cartCount } = useCart();
   const currentPage = useLocation().pathname;
-  const navigate = useNavigate();
 
   const pages = ["Home", "About", "Gallery", "Store", "Blog"];
   const links = {
